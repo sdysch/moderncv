@@ -1,0 +1,11 @@
+# compiled LaTeX files
+*.aux
+*.toc
+*.lot
+*.lof
+*.log
+*.out
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls

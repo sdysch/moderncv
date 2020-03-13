@@ -1,0 +1,54 @@
+stages:
+    - compile_examples
+
+compile_template:
+    stage: compile_examples
+
+    image: tianon/latex
+
+    script:
+        - cd examples
+        - latexmk -pdf template.tex
+
+    artifacts:
+        paths:
+            - template.pdf
+
+compile_template_es:
+    stage: compile_examples
+
+    image: tianon/latex
+
+    script:
+        - cd examples
+        - latexmk -pdf template-es.tex
+
+    artifacts:
+        paths:
+            - template-es.pdf
+
+compile_template_zh:
+    stage: compile_examplzh
+
+    image: tianon/latex
+
+    script:
+        - cd examplzh
+        - latexmk -pdf template-zh.tex
+
+    artifacts:
+        paths:
+            - template-zh.pdf
+
+compile_template_multibib:
+    stage: compile_examples
+
+    image: tianon/latex
+
+    script:
+        - cd examples
+        - latexmk -pdf template_multibib.tex
+
+    artifacts:
+        paths:
+            - template_multibib.pdf
